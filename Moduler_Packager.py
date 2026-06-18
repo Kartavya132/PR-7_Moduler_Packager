@@ -7,11 +7,11 @@ from sys import exit
 
 def menu_build(*arg):
     menu = arg
-    print(f"\n\n-----{menu[0]}-----")
+    print(f"\n\n------{menu[0]}------")
     try:
         for i in range(1, len(menu)):
             print(f"{i}. {menu[i]}")
-        print("-" * (10 + len(menu[0])))
+        print("-" * (12 + len(menu[0])))
         return input("Enter your choice : ")
     except:
         print("Enter the choice proper")
@@ -79,7 +79,46 @@ def date_time():
 
 
 def mathematic():
-    pass
+    while True:
+        choi = menu_build(
+            "Maths Operations",
+            "Solve Compound Interest",
+            "Calculate Factorial",
+            "Trigonometric Operations",
+            "Area of geometric Shapes",
+            "Back to Main Menu",
+        )
+        match choi:
+            case "1":
+                try:
+                    num = int(input("Enter the number : "))
+                    fact = math.factorial(num)
+                    print(f"The factorial of {num} is {fact}")
+                except:
+                    print("Invalid Input")
+            case "2":
+                try:
+                    principal = int(input("Enter the pricipal amm. : "))
+                    rate = float(input("Enter the rate of interest : "))
+                    years = float("Enter the duration in years : ")
+                    total_ammount = principal * (1 + rate / 100) ** years
+                    print(f"The Total Ammount is ${total_ammount}")
+                except ValueError:
+                    print("Invalid Input!!")
+            case "3":
+                tri = input("Enter s:- sin, c:- cos, t:- tan :: ")
+                try:
+                    angle = int(input("Enter the angle : "))
+                except ValueError:
+                    print("Invalid Input!!")
+                else:
+                    angle = math.radians(angle)
+                    if tri == "s":
+                        print(f"Sin {angle}` is {math.sin(angle)}")
+                    elif tri == "c":
+                        print(f"Cos {angle}` is {math.cos(angle)}")
+                    elif tri == "t":
+                        print(f"Tan {angle}` is {math.tan(angle)}")
 
 
 def random_data():
