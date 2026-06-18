@@ -34,10 +34,13 @@ def date_time():
             case "2":
                 first = input("Enter the first date (YYYY-MM-DD): ")
                 second = input("Enter the second date (YYYY-MM-DD): ")
-                diff_date = datetime.datetime.strptime(
-                    second, "%Y-%m-%d"
-                ) - datetime.datetime.strptime(first, "%Y-%m-%d")
-                print(f"The difference :: {diff_date.days} day/s")
+                try:
+                    diff_date = datetime.datetime.strptime(
+                        second, "%Y-%m-%d"
+                    ) - datetime.datetime.strptime(first, "%Y-%m-%d")
+                    print(f"The difference :: {diff_date.days} day/s")
+                except:
+                    print("Invalid Date")
             case "3":
                 date = datetime.datetime.strptime(
                     input("Enter the date (YYYY-MM-DD): "), "%Y-%m-%d"
@@ -56,7 +59,16 @@ def date_time():
                 end = datetime.datetime.now()
                 print(f"The stopped: {end-current}")
             case "5":
-                pass
+                try:
+                    time_dura = int(input("Enter the duration(minutes) : "))
+                except ValueError:
+                    print("Invalid Input")
+                else:
+                    f_curr = datetime.datetime.now()
+                    while True:
+                        if f_curr.minute + time_dura == datetime.datetime.now().minute:
+                            break
+                    print(f"{time_dura} min is passed")
             case "6":
                 print("Thank you")
                 break
