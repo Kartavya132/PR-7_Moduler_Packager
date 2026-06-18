@@ -7,7 +7,7 @@ from sys import exit
 
 def menu_build(*arg):
     menu = arg
-    print(f"-----{menu[0]}-----")
+    print(f"\n\n-----{menu[0]}-----")
     try:
         for i in range(1, len(menu)):
             print(f"{i}. {menu[i]}")
@@ -18,7 +18,52 @@ def menu_build(*arg):
 
 
 def date_time():
-    choi = menu_build("Date-Time Menu")
+    while True:
+        choi = menu_build(
+            "Date-Time Menu",
+            "Display current date and time",
+            "Calculate difference between two date",
+            "Format date into custom format",
+            "Stopwatch",
+            "Countdown timer",
+            "Back to Main Menu",
+        )
+        match choi:
+            case "1":
+                print(f"Current Date and time is {datetime.datetime.now()}")
+            case "2":
+                first = input("Enter the first date (YYYY-MM-DD): ")
+                second = input("Enter the second date (YYYY-MM-DD): ")
+                diff_date = datetime.datetime.strptime(
+                    second, "%Y-%m-%d"
+                ) - datetime.datetime.strptime(first, "%Y-%m-%d")
+                print(f"The difference :: {diff_date.days} day/s")
+            case "3":
+                date = datetime.datetime.strptime(
+                    input("Enter the date (YYYY-MM-DD): "), "%Y-%m-%d"
+                )
+                formats = input(f"Enter the format of date(EX: %d-%m-%Y): ")
+                try:
+                    print(f"Formatted date :: {date.strftime(formats)}")
+                except ValueError:
+                    print("You Enter invalid format!!")
+            case "4":
+                print("To start stopwatch, Press : Enter", end="")
+                input()
+                current = datetime.datetime.now()
+                print("Press : Enter, to stop", end="")
+                input()
+                end = datetime.datetime.now()
+                print(f"The stopped: {end-current}")
+            case "5":
+                pass
+            case "6":
+                print("Thank you")
+                break
+            case _:
+                print("Invalid choice")
+        print("---------------------------")
+    print("---------------------------")
 
 
 def mathematic():
