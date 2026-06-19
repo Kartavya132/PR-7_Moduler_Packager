@@ -82,8 +82,8 @@ def mathematic():
     while True:
         choi = menu_build(
             "Maths Operations",
-            "Solve Compound Interest",
             "Calculate Factorial",
+            "Solve Compound Interest",
             "Trigonometric Operations",
             "Area of geometric Shapes",
             "Back to Main Menu",
@@ -108,7 +108,7 @@ def mathematic():
             case "3":
                 tri = input("Enter s:- sin, c:- cos, t:- tan :: ")
                 try:
-                    angle = int(input("Enter the angle : "))
+                    angle = float(input("Enter the angle : "))
                 except ValueError:
                     print("Invalid Input!!")
                 else:
@@ -119,6 +119,28 @@ def mathematic():
                         print(f"Cos {angle}` is {math.cos(angle)}")
                     elif tri == "t":
                         print(f"Tan {angle}` is {math.tan(angle)}")
+            case "4":
+                choi = input(
+                    "Enter c:- circle, t:- triangle, r:- rectangle, s:- square :: "
+                )
+                if choi == "c":
+                    rad = float(input("Enter the radius (cm): "))
+                    print(f"The area is {math.pi() * rad * rad}")
+                elif choi == "t":
+                    side_1 = int(input("Enter the first side (cm): "))
+                    side_2 = int(input("Enter the second side (cm): "))
+                    side_3 = int(input("Enter the third side (cm): "))
+                    s = (side_1 + side_2 + side_3) / 2
+                    print(
+                        f"The area is {math.sqrt(s * (s - side_1) * (s - side_2) * (s - side_3))}cm"
+                    )
+            case "5":
+                print("Thank you")
+                break
+            case _:
+                print("Invalid Input!!")
+        print("---------------------------")
+    print("---------------------------")
 
 
 def random_data():
