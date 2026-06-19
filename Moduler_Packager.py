@@ -210,14 +210,80 @@ def random_data():
                     for _ in range(0, lent):
                         password += random.choice(char)
                     print(f"The random generated password : {password}")
+            case "4":
+                otp = ""
+                try:
+                    lent = int(input("Enter the lenght of OTP : "))
+                except:
+                    print("Invalid Input!!")
+                else:
+                    for _ in range(0, lent):
+                        opt += str(random.randint(0, 10))
+                    print(f"The random generated otp : {otp}")
+            case "5":
+                print("Thank you")
+                break
+            case _:
+                print("Invalid Input!!")
+        print("------------------------")
+    print("------------------------")
 
 
 def unique_id():
-    pass
+    print("Generate Unique ID ::-")
+    my_uuid = uuid.uuid4()
+    print(f"ID:- {my_uuid}")
+    print("Thank you!, Press Enter to continue")
+    input()
 
 
 def files():
-    pass
+    while True:
+        choi = menu_build(
+            "File Operation",
+            "Create a new file",
+            "Write to a file",
+            "Read from a file",
+            "Append to a file",
+            "back to Main Menu",
+        )
+
+        match choi:
+            case "1":
+                file_name = input("Enter the name of the file : ")
+                try:
+                    with open(file_name, "x"):
+                        pass
+                    print("The file is created!!")
+                except ValueError:
+                    print("Invalid Input!!")
+                except FileExistsError:
+                    print("file already exists make new file")
+            case "2":
+                file_name = input("Enter the file name to write : ")
+                print("Enter what to write, below ( '.' is used for seperation) : ")
+                work = input().split(".")
+                write = ""
+                for item in work:
+                    write += item + ".\n"
+                try:
+                    with open(file_name, "w") as f:
+                        f.write(write)
+                except:
+                    print("Invalid Input, try again")
+            case "3":
+                file_name = input("Enter the file name to read : ")
+                try:
+                    with open(file_name, "r") as f:
+                        reads = [lines for lines in f.readlines()]
+                except ValueError:
+                    print("Invalid Input!!")
+                except FileNotFoundError:
+                    print("There si no such file!")
+                else:
+                    print("The lines in file is ::-")
+                    for line in reads:
+                        print(line)
 
 
 def attributes():
@@ -260,7 +326,7 @@ def show_menu():
                 exit()
             case _:
                 print("Invalid choice")
-                print("enter the choice as per instruction only")
+                print("Enter the choice as per instruction only")
 
 
 def main():
