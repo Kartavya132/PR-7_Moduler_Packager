@@ -269,6 +269,7 @@ def files():
                 try:
                     with open(file_name, "w") as f:
                         f.write(write)
+                    print("The lines added")
                 except:
                     print("Invalid Input, try again")
             case "3":
@@ -281,9 +282,15 @@ def files():
                 except FileNotFoundError:
                     print("There si no such file!")
                 else:
-                    print("The lines in file is ::-")
-                    for line in reads:
-                        print(line)
+                    if reads:
+                        print("The lines in file is ::-")
+                        for line in reads:
+                            print(line, end="")
+                        print("\nAll lines is readed")
+                    else:
+                        print("There is no data")
+            case "4":
+                file_name = input("Enter the file name to append : ")
 
 
 def attributes():
