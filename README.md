@@ -1,38 +1,35 @@
-# Omni Media Tool
+# 🛠️ Omni Media Tool
 
-A Python-based command-line utility that combines multiple useful tools into one application. It provides date & time utilities, mathematical calculations, random data generation, UUID creation, file operations, and module attribute exploration.
+A Python-based command-line utility that combines multiple useful tools into one application. It provides 📅 date & time utilities, ➗ mathematical calculations, 🎲 random data generation, 🆔 UUID creation, 📂 file operations, and 🔍 module attribute exploration.
 
-## Features
+## ✨ Features
 
-- Date & Time Operations
-- Mathematical Calculations
-- Random Data Generation
-- UUID Generator
-- File Operations
-- Module Attribute Explorer
-- Menu Driven Interface
-
----
-
+* 📅 Date & Time Operations
+* ➗ Mathematical Calculations
+* 🎲 Random Data Generation
+* 🆔 UUID Generator
+* 📂 File Operations
+* 🔍 Module Attribute Explorer
+* 📋 Menu Driven Interface
 
 ---
 
-# Main Menu
+# 🏠 Main Menu
 
 ```text
 ------Main Menu------
-1. Datetime and Time Operations
-2. Mathematical Operations
-3. Random Data Generator
-4. Generate Unique ID (UUID)
-5. File Operations
-6. Attributes Explorer
-7. Exit
+1. 📅 Datetime and Time Operations
+2. ➗ Mathematical Operations
+3. 🎲 Random Data Generator
+4. 🆔 Generate Unique ID (UUID)
+5. 📂 File Operations
+6. 🔍 Attributes Explorer
+7. ❌ Exit
 ```
 
 ---
 
-# Date & Time Operations
+# 📅 Date & Time Operations
 
 ```text
 1. Display current date and time
@@ -43,7 +40,7 @@ A Python-based command-line utility that combines multiple useful tools into one
 6. Back to Main Menu
 ```
 
-## 1. Display Current Date & Time
+## 🕒 1. Display Current Date & Time
 
 ### Input
 
@@ -59,7 +56,7 @@ Current Date and time is 2025-06-20 14:30:10.123456
 
 ---
 
-## 2. Calculate Difference Between Two Dates
+## 📆 2. Calculate Difference Between Two Dates
 
 ### Input
 
@@ -75,7 +72,7 @@ Enter the second date (YYYY-MM-DD): 2025-01-15
 The difference :: 14 day/s
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 Enter the first date (YYYY-MM-DD): abc
@@ -90,7 +87,7 @@ Invalid Date
 
 ---
 
-## 3. Format Date
+## 📝 3. Format Date
 
 ### Input
 
@@ -106,7 +103,7 @@ Enter the format of date(EX: %d-%m-%Y): %d/%m/%Y
 Formatted date :: 20/06/2025
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 You Enter invalid format!!
@@ -114,7 +111,7 @@ You Enter invalid format!!
 
 ---
 
-## 4. Stopwatch
+## ⏱️ 4. Stopwatch
 
 ### Input
 
@@ -132,7 +129,7 @@ The stopped: 0:00:12.456789
 
 ---
 
-## 5. Countdown Timer
+## ⏳ 5. Countdown Timer
 
 ### Input
 
@@ -147,7 +144,7 @@ Enter the duration(minutes): 1
 1 min is passed
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 Invalid Input
@@ -155,7 +152,7 @@ Invalid Input
 
 ---
 
-# Mathematical Operations
+# ➗ Mathematical Operations
 
 ```text
 1. Calculate Factorial
@@ -167,7 +164,7 @@ Invalid Input
 
 ---
 
-## 1. Factorial
+## 🔢 1. Factorial
 
 ### Input
 
@@ -182,7 +179,7 @@ Enter the number : 5
 The factorial of 5 is 120
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 Invalid Input
@@ -190,9 +187,9 @@ Invalid Input
 
 ---
 
-## 2. Compound Interest
+## 💰 2. Compound Interest
 
-Formula Used:
+### Formula Used
 
 ```text
 A = P(1 + r/100)^t
@@ -213,7 +210,7 @@ Enter the duration in years : 2
 The Total Amount is $1102.5
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 Invalid Input!!
@@ -221,9 +218,9 @@ Invalid Input!!
 
 ---
 
-## 3. Trigonometric Operations
+## 📐 3. Trigonometric Operations
 
-### Sin
+### 🔹 Sin
 
 #### Input
 
@@ -238,7 +235,7 @@ Enter the angle : 30
 Sin 0.5235987755982988 is 0.5
 ```
 
-### Cos
+### 🔹 Cos
 
 #### Input
 
@@ -253,7 +250,7 @@ Enter the angle : 60
 Cos 1.0471975511965976 is 0.5
 ```
 
-### Tan
+### 🔹 Tan
 
 #### Input
 
@@ -268,7 +265,7 @@ Enter the angle : 45
 Tan 0.7853981633974483 is 1.0
 ```
 
-### Invalid Input
+### ❌ Invalid Input
 
 ```text
 Invalid Input!!
@@ -276,9 +273,9 @@ Invalid Input!!
 
 ---
 
-## 4. Area of Geometric Shapes
+## 📏 4. Area of Geometric Shapes
 
-### Circle
+### ⚪ Circle
 
 #### Input
 
@@ -295,7 +292,7 @@ The area is 78.53981633974483
 
 ---
 
-### Triangle (Heron's Formula)
+### 🔺 Triangle (Heron's Formula)
 
 #### Input
 
@@ -314,7 +311,7 @@ The area is 6.0cm
 
 ---
 
-### Rectangle
+### ▭ Rectangle
 
 #### Input
 
@@ -332,7 +329,7 @@ The area is 50
 
 ---
 
-### Square
+### ◼️ Square
 
 #### Input
 
@@ -347,7 +344,7 @@ Enter side : 4
 The area is 16
 ```
 
-### Invalid Choice
+### ❌ Invalid Choice
 
 ```text
 Invalid choice!!
@@ -355,7 +352,7 @@ Invalid choice!!
 
 ---
 
-# Random Data Generator
+# 🎲 Random Data Generator
 
 ```text
 1. Generate Random Number
@@ -367,7 +364,7 @@ Invalid choice!!
 
 ---
 
-## 1. Random Number
+## 🎯 1. Random Number
 
 ### Input
 
@@ -383,7 +380,7 @@ The random number is 5832
 
 ---
 
-## 2. Random List
+## 📋 2. Random List
 
 ### Input
 
@@ -400,7 +397,7 @@ The random generated lists is:
 
 ---
 
-## 3. Random Password
+## 🔐 3. Random Password
 
 ### Input
 
@@ -416,7 +413,7 @@ The random generated password : Ab#8kP1@Qm2$
 
 ---
 
-## 4. Random OTP
+## 📲 4. Random OTP
 
 ### Input
 
@@ -432,7 +429,7 @@ The random generated otp : 583291
 
 ---
 
-## Possible Invalid Outputs
+## ❌ Possible Invalid Outputs
 
 ```text
 Invalid Input!!
@@ -440,7 +437,7 @@ Invalid Input!!
 
 ---
 
-# UUID Generator
+# 🆔 UUID Generator
 
 Generates a Version-4 UUID.
 
@@ -460,7 +457,7 @@ Thank you!, Press Enter to continue
 
 ---
 
-# File Operations
+# 📂 File Operations
 
 ```text
 1. Create a new file
@@ -472,7 +469,7 @@ Thank you!, Press Enter to continue
 
 ---
 
-## 1. Create File
+## 📄 1. Create File
 
 ### Input
 
@@ -486,7 +483,7 @@ sample.txt
 The file is created!!
 ```
 
-### Existing File
+### ⚠️ Existing File
 
 ```text
 file already exists make new file
@@ -494,7 +491,7 @@ file already exists make new file
 
 ---
 
-## 2. Write to File
+## ✍️ 2. Write to File
 
 ### Input
 
@@ -518,7 +515,7 @@ The lines are written
 
 ---
 
-## 3. Read File
+## 📖 3. Read File
 
 ### Input
 
@@ -536,7 +533,7 @@ This is test data.
 All lines is readed
 ```
 
-### File Not Found
+### ❌ File Not Found
 
 ```text
 There si no such file!
@@ -544,7 +541,7 @@ There si no such file!
 
 ---
 
-## 4. Append to File
+## ➕ 4. Append to File
 
 ### Input
 
@@ -569,17 +566,17 @@ New line added.
 
 ---
 
-# Attributes Explorer
+# 🔍 Attributes Explorer
 
 Displays available attributes of selected modules.
 
-Supported Modules:
+### ✅ Supported Modules
 
-- math
-- random
-- datetime
-- uuid
-- sys
+* 📐 math
+* 🎲 random
+* 📅 datetime
+* 🆔 uuid
+* ⚙️ sys
 
 ### Input
 
@@ -599,7 +596,7 @@ asin,
 ]
 ```
 
-### Invalid Module
+### ❌ Invalid Module
 
 ```text
 Invalid module
@@ -607,18 +604,18 @@ Invalid module
 
 ---
 
-# Error Handling
+# 🛡️ Error Handling
 
 The application handles:
 
-- Invalid menu selections
-- Invalid dates
-- Invalid numeric inputs
-- Missing files
-- Existing files
-- Unsupported modules
+* ❌ Invalid menu selections
+* 📅 Invalid dates
+* 🔢 Invalid numeric inputs
+* 📂 Missing files
+* ⚠️ Existing files
+* 🔍 Unsupported modules
 
-Possible outputs:
+### Possible Outputs
 
 ```text
 Invalid choice
@@ -632,7 +629,7 @@ file already exists make new file
 
 ---
 
-# Modules Used
+# 📦 Modules Used
 
 ```python
 import math
@@ -641,5 +638,3 @@ import random
 import uuid
 import sys
 ```
-
----
