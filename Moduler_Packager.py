@@ -120,20 +120,43 @@ def mathematic():
                     elif tri == "t":
                         print(f"Tan {angle}` is {math.tan(angle)}")
             case "4":
-                choi = input(
+                fig = input(
                     "Enter c:- circle, t:- triangle, r:- rectangle, s:- square :: "
                 )
-                if choi == "c":
-                    rad = float(input("Enter the radius (cm): "))
-                    print(f"The area is {math.pi() * rad * rad}")
-                elif choi == "t":
-                    side_1 = int(input("Enter the first side (cm): "))
-                    side_2 = int(input("Enter the second side (cm): "))
-                    side_3 = int(input("Enter the third side (cm): "))
-                    s = (side_1 + side_2 + side_3) / 2
-                    print(
-                        f"The area is {math.sqrt(s * (s - side_1) * (s - side_2) * (s - side_3))}cm"
-                    )
+                if fig == "c":
+                    try:
+                        rad = float(input("Enter the radius (cm): "))
+                        print(f"The area is {math.pi() * rad * rad}")
+                    except ValueError:
+                        print("Invalid Input!!")
+                elif fig == "t":
+                    try:
+                        side_1 = int(input("Enter the first side (cm): "))
+                        side_2 = int(input("Enter the second side (cm): "))
+                        side_3 = int(input("Enter the third side (cm): "))
+                        s = (side_1 + side_2 + side_3) / 2
+                        print(
+                            f"The area is {math.sqrt(s * (s - side_1) * (s - side_2) * (s - side_3))}cm"
+                        )
+                    except ValueError:
+                        print("Invalid Input!!")
+
+                elif fig == "r":
+                    try:
+                        a = int(input("Enter the lenght : "))
+                        b = int(input("Enter the breadth : "))
+                    except ValueError:
+                        print("Invalid Input!!")
+                    else:
+                        print(f"The area is {a*b}")
+                elif fig == "s":
+                    try:
+                        side = input("Enter the side (cm) : ")
+                        print(f"The area is {side * side}")
+                    except ValueError:
+                        print("Invalid Input!!")
+                else:
+                    print("Invalid choice!!")
             case "5":
                 print("Thank you")
                 break
@@ -144,7 +167,49 @@ def mathematic():
 
 
 def random_data():
-    pass
+    while True:
+        choi = menu_build(
+            "Random data Generator",
+            "Generate random number",
+            "Generate random list",
+            "Create random password",
+            "Generate Random OTP",
+            "Back to Main Menu",
+        )
+        match choi:
+            case "1":
+                try:
+                    dig = int(input("Enter the number of digit : "))
+                except:
+                    print("Invalid Input!!")
+                else:
+                    print(f"The random number is {random.randint(0,(10**dig))}")
+            case "2":
+                lists = []
+                try:
+                    n = int(input("Enter the length of list : "))
+                except:
+                    print("Invalid Input!!")
+                else:
+                    for _ in range(1, n + 1):
+                        lists.append(random.randint(1, 10))
+                    print("The random generated lists is:\n:- ", end="")
+                    for i in lists:
+                        print(f"{i}", end=" ")
+                    print()
+            case "3":
+                char = "abcdefghijklmnopqrstuvwxyz"
+                char += char.upper()
+                char += "1234567890!@#$%+-_=&*"
+                password = ""
+                try:
+                    lent = int(input("Enter the length of password : "))
+                except:
+                    print("Invalid Input!!")
+                else:
+                    for _ in range(0, lent):
+                        password += random.choice(char)
+                    print(f"The random generated password : {password}")
 
 
 def unique_id():
