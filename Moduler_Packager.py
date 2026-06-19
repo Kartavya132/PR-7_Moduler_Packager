@@ -2,7 +2,7 @@ import math
 import datetime
 import random
 import uuid
-from sys import exit
+import sys
 
 
 def menu_build(*arg):
@@ -262,14 +262,14 @@ def files():
             case "2":
                 file_name = input("Enter the file name to write : ")
                 print("Enter what to write, below ( '.' is used for seperation) : ")
-                work = input().split(".")
+                work = input(":-").split(".")
                 write = ""
                 for item in work:
                     write += item + ".\n"
                 try:
                     with open(file_name, "w") as f:
                         f.write(write)
-                    print("The lines added")
+                    print("The lines are written")
                 except:
                     print("Invalid Input, try again")
             case "3":
@@ -291,10 +291,48 @@ def files():
                         print("There is no data")
             case "4":
                 file_name = input("Enter the file name to append : ")
+                print("Enter what to append, below ( '.' is used for seperation) : ")
+                work = input(":-").split(".")
+                write = ""
+                for item in work:
+                    write += item + ".\n"
+                try:
+                    with open(file_name, "a") as f:
+                        f.write(write)
+                    print("The lines added")
+                except:
+                    print("Invalid Input, try again")
+            case "5":
+                print("Thank you")
+                break
+            case _:
+                print("Invalid Input!!")
+        print("------------------------")
+    print("------------------------")
 
 
 def attributes():
-    pass
+    module = input("Enter the module you want to enter : ")
+    if module in "math":
+        attribute = dir(math)
+    elif module in "random":
+        attribute = dir(random)
+    elif module in "datetime":
+        attribute = dir(datetime)
+    elif module in "uuid":
+        attribute = dir(uuid)
+    elif module in "sys":
+        attribute = dir(sys)
+    else:
+        print("Invalid module")
+        print("---------------------")
+        return
+    print("The Attributes are :-\n[", end="")
+    for i in range(0, 20):
+        print(f"{attribute[i]}, ", end="")
+    print("...}")
+
+    print("------------------------")
 
 
 def show_menu():
@@ -330,7 +368,7 @@ def show_menu():
             case "7":
                 print("Thank for using me!!")
                 print("Good Bye")
-                exit()
+                sys.exit()
             case _:
                 print("Invalid choice")
                 print("Enter the choice as per instruction only")
