@@ -42,11 +42,11 @@ def date_time():
                 except:
                     print("Invalid Date")
             case "3":
-                date = datetime.datetime.strptime(
-                    input("Enter the date (YYYY-MM-DD): "), "%Y-%m-%d"
-                )
-                formats = input(f"Enter the format of date(EX: %d-%m-%Y): ")
                 try:
+                    date = datetime.datetime.strptime(
+                        input("Enter the date (YYYY-MM-DD): "), "%Y-%m-%d"
+                    )
+                    formats = input("Enter the format of date(EX: %d-%m-%Y): ")
                     print(f"Formatted date :: {date.strftime(formats)}")
                 except ValueError:
                     print("You Enter invalid format!!")
@@ -64,10 +64,11 @@ def date_time():
                 except ValueError:
                     print("Invalid Input")
                 else:
-                    f_curr = datetime.datetime.now()
-                    while True:
-                        if f_curr.minute + time_dura == datetime.datetime.now().minute:
-                            break
+                    end_time = datetime.datetime.now() + datetime.timedelta(
+                        minutes=time_dura
+                    )
+                    while datetime.datetime.now() < end_time:
+                        pass
                     print(f"{time_dura} min is passed")
             case "6":
                 print("Thank you")
@@ -100,7 +101,7 @@ def mathematic():
                 try:
                     principal = int(input("Enter the pricipal amm. : "))
                     rate = float(input("Enter the rate of interest : "))
-                    years = float("Enter the duration in years : ")
+                    years = float(input("Enter the duration in years : "))
                     total_ammount = principal * (1 + rate / 100) ** years
                     print(f"The Total Ammount is ${total_ammount}")
                 except ValueError:
@@ -126,7 +127,7 @@ def mathematic():
                 if fig == "c":
                     try:
                         rad = float(input("Enter the radius (cm): "))
-                        print(f"The area is {math.pi() * rad * rad}")
+                        print(f"The area is {math.pi * rad * rad}")
                     except ValueError:
                         print("Invalid Input!!")
                 elif fig == "t":
@@ -151,7 +152,7 @@ def mathematic():
                         print(f"The area is {a*b}")
                 elif fig == "s":
                     try:
-                        side = input("Enter the side (cm) : ")
+                        side = float(input("Enter the side (cm) : "))
                         print(f"The area is {side * side}")
                     except ValueError:
                         print("Invalid Input!!")
@@ -218,7 +219,7 @@ def random_data():
                     print("Invalid Input!!")
                 else:
                     for _ in range(0, lent):
-                        opt += str(random.randint(0, 10))
+                        otp += str(random.randint(0, 9))
                     print(f"The random generated otp : {otp}")
             case "5":
                 print("Thank you")
@@ -372,6 +373,7 @@ def show_menu():
             case _:
                 print("Invalid choice")
                 print("Enter the choice as per instruction only")
+        print("====================")
 
 
 def main():
