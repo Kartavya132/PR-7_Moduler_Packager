@@ -31,16 +31,16 @@ A Python-based command-line utility that combines multiple useful tools into one
 ```text
 Moduler_Packager/
 │
-├── main.py                 # The main entry point to run the application
-└── Package/             # The core package directory
-    ├── __init__.py         # Makes this directory a package
-    ├── menu.py             # Shared menu building utilities
-    ├── datetime_tools.py    # Date and time functions (Option 1)
-    ├── math_tools.py         # Mathematical functions (Option 2)
-    ├── random_tools.py       # Random data generation (Option 3)
-    ├── uuid_tool.py    # UUID generation (Option 4)
-    ├── file_tools.py         # File input/output operations (Option 5)
-    └── attributes.py         # Module attribute explorer (Option 6)
+├── main.py     
+└── Package/    
+    ├── __init__.py
+    ├── menu.py   
+    ├── datetime_tools.py  
+    ├── math_tools.py      
+    ├── random_tools.py    
+    ├── uuid_tool.py 
+    ├── file_tools.py
+    └── attributes.py
 ```
 ---
 
