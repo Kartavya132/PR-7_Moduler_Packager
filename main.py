@@ -1,12 +1,6 @@
 import sys
-from omni_utils import (
-    date_time,
-    mathematic,
-    random_data,
-    unique_id,
-    files,
-    attributes
-)
+from Package import date_time, mathematic, random_data, unique_id, files, attributes
+
 
 def show_menu():
     while True:
@@ -47,8 +41,10 @@ def show_menu():
                 print("Enter the choice as per instruction only")
         print("====================")
 
+
 def main():
     show_menu()
+
 
 if __name__ == "__main__":
     main()
